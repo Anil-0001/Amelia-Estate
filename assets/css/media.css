@@ -1,0 +1,73 @@
+/* Mobile menu state */
+.mobile-nav.is-open {
+  display: grid;
+}
+
+/* Hero overlay is always visible on touch screens. */
+.hero-bg {
+  background-position: top center;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.76)),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38));
+}
+
+/* Desktop hero position */
+@media (min-width: 640px) {
+ 
+  .hero-bg {
+    background-position: center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.24) 50%, rgba(0, 0, 0, 0.48)),
+      linear-gradient(180deg, rgba(7, 10, 18, 0.28), rgba(7, 10, 18, 0.66));
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-nav,
+  .mobile-nav.is-open {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .about-section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .opportunity-section > .relative {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+
+  .about-gallery {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.78fr);
+  }
+
+  .about-gallery > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 639px) {
+  .hero-section > .relative {
+    padding-bottom: 10px;
+  }
+
+  .about-section {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .opportunity-section > .relative {
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+
+}

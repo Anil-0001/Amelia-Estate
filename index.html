@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amelia Estate II | Realty Nivesh</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Project Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/media.css">
+</head>
+
+<body class="min-h-screen bg-white text-[#202020] [font-family:'Jost',Arial,sans-serif]">
+  <!-- Header start -->
+  <header class="fixed left-0 top-0 z-50 w-full bg-white shadow-[0_12px_30px_rgba(18,18,18,0.08)]">
+    <div class="mx-auto flex h-[72px] max-w-[1199px] items-center justify-between px-4 sm:h-18 sm:px-6 lg:px-8">
+      <!-- Logo area -->
+      <a href="#" class="flex items-center gap-3 sm:gap-5" aria-label="Realty Nivesh and Amelia Estate II home">
+        <img src="assets/images/logo1.png" alt="Realty Nivesh"
+          class="block w-24 object-contain min-[421px]:w-28 sm:w-36 xl:w-[148px]">
+        <span class="h-[30px] w-px bg-[#dedede] sm:h-[38px]" aria-hidden="true"></span>
+        <img src="assets/images/logo2.png" alt="Amelia Estate II"
+          class="block w-[84px] object-contain min-[421px]:w-[98px] sm:w-[120px] xl:w-[132px]"/>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="hidden items-center gap-5 xl:gap-4 lg:flex" aria-label="Primary navigation">
+        <a href="#about" class="font-normal text-[#1f2933] transition-colors hover:text-[#b98b43]">About
+          Us</a>
+        <a href="#products"
+          class="inline-flex items-center gap-1 text-[16px] font-normal text-[#1f2933] transition-colors hover:text-[#b98b43]">
+          Products <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+        </a>
+        <a href="#plans" class=" font-normal text-[#1f2933] transition-colors hover:text-[#b98b43]">Plans</a>
+        <a href="#location"
+          class="text-[16px] font-normal text-[#1f2933] transition-colors hover:text-[#b98b43]">Location</a>
+        <a href="#price" class=" font-normal text-[#1f2933] transition-colors hover:text-[#b98b43]">Price</a>
+        <a href="#amenities"
+          class="font-normal text-[#1f2933] transition-colors hover:text-[#b98b43]">Amenities</a>
+        <a href="#specification"
+          class="font-normal text-[#1f2933] transition-colors hover:text-[#b98b43]">Specification</a>
+        <a href="#gallery"
+          class="font-normal text-[#1f2933] transition-colors hover:text-[#b98b43]">Gallery</a>
+        <a href="#contact" class="font-normal text-[#1f2933] transition-colors hover:text-[#b98b43]">Contact
+          Us</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button
+        class="menu-toggle inline-flex h-10 w-10 items-center justify-center text-[23px] text-[#1f2933] transition hover:-translate-y-0.5 hover:text-[#b98b43] sm:h-11 sm:w-11 "
+        type="button" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Mobile navigation -->
+    <nav
+      class="mobile-nav hidden gap-0.5 border-t border-[#eeeeee] bg-white px-5 pb-[18px] pt-3 shadow-[0_16px_24px_rgba(20,20,20,0.08)] lg:hidden"
+      aria-label="Mobile navigation">
+      <a href="#about" class="border-b border-[#f0f0f0] py-[13px] text-sm font-semibold text-[#1f2933]">About Us</a>
+      <a href="#products" class="border-b border-[#f0f0f0] py-[13px] text-sm font-semibold text-[#1f2933]">Products</a>
+      <a href="#plans" class="border-b border-[#f0f0f0] py-[13px] text-sm font-semibold text-[#1f2933]">Plans</a>
+      <a href="#location" class="border-b border-[#f0f0f0] py-[13px] text-sm font-semibold text-[#1f2933]">Location</a>
+      <a href="#price" class="border-b border-[#f0f0f0] py-[13px] text-sm font-semibold text-[#1f2933]">Price</a>
+      <a href="#amenities"
+        class="border-b border-[#f0f0f0] py-[13px] text-sm font-semibold text-[#1f2933]">Amenities</a>
+      <a href="#specification"
+        class="border-b border-[#f0f0f0] py-[13px] text-sm font-semibold text-[#1f2933]">Specification</a>
+      <a href="#gallery" class="border-b border-[#f0f0f0] py-[13px] text-sm font-semibold text-[#1f2933]">Gallery</a>
+      <a href="#contact" class="border-b border-[#f0f0f0] py-[13px] text-sm font-semibold text-[#1f2933]">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero-section group relative min-h-[680px] scroll-mt-20 overflow-hidden bg-[#111111] sm:min-h-screen"
+      id="home" aria-label="Amelia Estate II project highlight">
+      <!-- Hero background slider -->
+      <div class="hero-bg absolute inset-0" aria-hidden="true">
+        <div class="hero-slide hero-slide-1 is-active absolute inset-0"></div>
+        <div class="hero-slide hero-slide-2 absolute inset-0"></div>
+        <div class="hero-slide hero-slide-3 absolute inset-0"></div>
+      </div>
+
+      <!-- Hover overlay -->
+      <div class="hero-overlay absolute inset-0" aria-hidden="true"></div>
+
+      <!-- Hero content -->
+      <div
+        class="relative z-10 mx-auto flex min-h-[680px] max-w-7xl items-center justify-center px-4 pt-20 text-center sm:min-h-screen sm:px-6 lg:px-8">
+        <div class="hero-content mx-auto max-w-3xl pt-[22px] sm:pt-[42px]">
+          <div class="hero-panel is-active">
+            <p class="hero-text-shadow mb-4 text-[clamp(1.55rem,3vw,2.55rem)] font-semibold text-white">
+              Premium Stilt + 4</p>
+            <h1 class="hero-text-shadow text-[40px] font-bold leading-tight text-white">
+              Low-Rise 3 BHK Built-Up Floors
+            </h1>
+            <p
+              class="hero-text-shadow mx-auto mt-5 max-w-2xl text-[clamp(0.95rem,1.35vw,1.15rem)] leading-[1.7] text-white sm:leading-[1.8]">
+              A rare low-rise address near Aero City Mohali for families who value privacy, space, and refined living.
+            </p>
+          </div>
+
+          <div class="hero-panel">
+            <p class="hero-text-shadow mb-3 text-xs font-normal text-white/90">
+              Zirakpur-Patiala Highway | Near Aero City Mohali</p>
+            <p class="hero-text-shadow mb-4 text-[clamp(1.55rem,3vw,2.55rem)] font-semibold text-white">
+              Premium Stilt + 4</p>
+            <h1 class="hero-text-shadow text-[40px] font-bold leading-tight text-white">
+              Low-Rise 3 BHK Built-Up Floors
+            </h1>
+            <p
+              class="hero-text-shadow mx-auto mt-5 max-w-2xl text-[clamp(0.95rem,1.35vw,1.15rem)] leading-[1.7] text-white sm:leading-[1.8]">
+              A rare lowrise address near Aero City Mohali for families who value privacy, space, and refined living.
+            </p>
+            <div class="hero-badges mt-6 flex flex-wrap items-center justify-center gap-3">
+              <span class="rounded-full bg-black/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">3 BHK Built-Up Floors</span>
+              <span class="rounded-full bg-black/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">Stilt + 4 With Lift</span>
+              <span class="rounded-full bg-black/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">Store Room</span>
+              <span class="rounded-full bg-black/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">Roof Rights On 4th Floor</span>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <p class="hero-text-shadow mb-3 text-xs font-normal text-white/90">
+              Zirakpur-Patiala Highway | Near Aero City Mohali</p>
+            <p class="hero-text-shadow mb-4 text-[clamp(1.55rem,3vw,2.55rem)] font-semibold text-white">
+              Premium Stilt + 4</p>
+            <h1 class="hero-text-shadow text-[40px] font-bold leading-tight text-white">
+              Low-Rise 3 BHK Built-Up Floors
+            </h1>
+            <p
+              class="hero-text-shadow mx-auto mt-5 max-w-2xl text-[clamp(0.95rem,1.35vw,1.15rem)] leading-[1.7] text-white sm:leading-[1.8]">
+              A rare lowrise address near Aero City Mohali for families who value privacy, space, and refined living.
+            </p>
+            <div class="hero-badges mt-6 flex flex-wrap items-center justify-center gap-3">
+              <span class="rounded-full bg-black/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">3 BHK Built-Up Floors</span>
+              <span class="rounded-full bg-black/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">Stilt + 4 With Lift</span>
+              <span class="rounded-full bg-black/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">Store Room</span>
+              <span class="rounded-full bg-black/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">Roof Rights On 4th Floor</span>
+            </div>
+          </div>
+
+          <div class="hero-actions mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href="#contact"
+              class="primary-cta inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg px-9 text-sm font-semibold text-white sm:w-auto">
+              Enquire Now
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/"
+              class="secondary-cta inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-lg px-8 text-sm font-semibold text-white sm:w-auto"
+              aria-label="Chat on WhatsApp">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project snapshot -->
+    <section class="snapshot-section m-auto bg-[#f6f4f0] px-4 py-16 sm:px-6 lg:px-8">
+      <div class="m-auto max-w-[1070px]">
+        <h2 class="snapshot-title mb-12 text-center text-3xl font-bold text-[#4a4642]">Project Snapshot</h2>
+
+        <div class="grid grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-6">
+          <article
+            class="snapshot-card flex min-h-[142px] flex-col items-center justify-center rounded-2xl bg-white px-4 py-6 text-center">
+            <i class="fa-regular fa-building mb-4 text-3xl text-[#707070]" aria-hidden="true"></i>
+            <p class="mb-2 text-xs font-medium text-[#d6b16f]">Configuration</p>
+            <h3 class="text-sm font-bold uppercase tracking-[0.08em] text-[#222222]">3 BHK<br>Floors</h3>
+          </article>
+
+          <article
+            class="snapshot-card flex min-h-[142px] flex-col items-center justify-center rounded-2xl bg-white px-4 py-6 text-center">
+            <i class="fa-solid fa-layer-group mb-4 text-3xl text-[#707070]" aria-hidden="true"></i>
+            <p class="mb-2 text-xs font-medium text-[#d6b16f]">Size</p>
+            <h3 class="text-sm font-bold uppercase tracking-[0.08em] text-[#222222]">230/219 /205<br>Sq. Yds.</h3>
+          </article>
+
+          <article
+            class="snapshot-card flex min-h-[142px] flex-col items-center justify-center rounded-2xl bg-white px-4 py-6 text-center">
+            <i class="fa-solid fa-building-user mb-4 text-3xl text-[#707070]" aria-hidden="true"></i>
+            <p class="mb-2 text-xs font-medium text-[#d6b16f]">Structure</p>
+            <h3 class="text-sm font-bold uppercase tracking-[0.08em] text-[#222222]">Stilt + 4</h3>
+          </article>
+
+          <article
+            class="snapshot-card flex min-h-[142px] flex-col items-center justify-center rounded-2xl bg-white px-4 py-6 text-center">
+            <i class="fa-solid fa-person-digging mb-4 text-3xl text-[#707070]" aria-hidden="true"></i>
+            <p class="mb-2 text-xs font-medium text-[#d6b16f]">Status</p>
+            <h3 class="text-sm font-bold uppercase tracking-[0.08em] text-[#222222]">Under<br>Construction</h3>
+          </article>
+
+          <article
+            class="snapshot-card flex min-h-[142px] flex-col items-center justify-center rounded-2xl bg-white px-4 py-6 text-center">
+            <i class="fa-regular fa-calendar-check mb-4 text-3xl text-[#707070]" aria-hidden="true"></i>
+            <p class="mb-2 text-xs font-medium text-[#d6b16f]">Possession</p>
+            <h3 class="text-sm font-bold uppercase tracking-[0.08em] text-[#222222]">December<br>2026</h3>
+          </article>
+
+          <article
+            class="snapshot-card flex min-h-[142px] flex-col items-center justify-center rounded-2xl bg-white px-4 py-6 text-center">
+            <i class="fa-solid fa-certificate mb-4 text-3xl text-[#707070]" aria-hidden="true"></i>
+            <p class="mb-2 text-xs font-medium text-[#d6b16f]">RERA Number</p>
+            <h3 class="text-sm font-bold uppercase tracking-[0.08em] text-[#222222]">PBRERA-<br>SAS79-PR1183</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section
+      class="about-section scroll-mt-20 overflow-hidden bg-[#191919] px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24"
+      id="about">
+      <div class="mx-auto grid max-w-[1070px] items-center gap-10 lg:grid-cols-[1.03fr_1fr] lg:gap-12">
+        <div class="about-gallery grid grid-cols-[1.6fr_0.78fr] gap-4">
+          <img src="assets/images/about1.png" alt="Amelia Estate II premium low-rise exterior"
+            class="about-image about-image-large h-full min-h-[300px] w-full rounded-[22px] object-cover shadow-[0_20px_46px_rgba(0,0,0,0.28)] max-[639px]:min-h-[230px] sm:min-h-[430px]">
+          <div class="grid gap-4">
+            <img src="assets/images/about2.jpg" alt="Private balcony detail at Amelia Estate II"
+              class="about-image h-full min-h-[142px] w-full rounded-[20px] object-cover shadow-[0_20px_46px_rgba(0,0,0,0.28)] max-[639px]:min-h-[230px] sm:min-h-[205px]">
+            <img src="assets/images/about3.png" alt="Modern living room at Amelia Estate II"
+              class="about-image h-full min-h-[142px] w-full rounded-[20px] object-cover shadow-[0_20px_46px_rgba(0,0,0,0.28)] max-[639px]:min-h-[230px] sm:min-h-[205px]">
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-kicker mb-4 flex items-center gap-3">
+            <span class="h-px w-6 bg-[#d4ae69]" aria-hidden="true"></span>
+            <p class="text-xs font-medium tracking-[0.08em] text-[#d4ae69]">About Amelia Estate II</p>
+          </div>
+
+          <h2
+            class="about-heading max-w-[560px] text-[clamp(1.9rem,3vw,2.75rem)] font-bold leading-[1.22] text-[#f5f1eb]">
+            A Premium Low-Rise Living Experience Near Aero City Mohali
+          </h2>
+          <p class="about-copy mt-4 max-w-[560px] text-sm leading-7 text-[#a8a8a8]">
+            Thoughtfully designed 3 BHK built-up floors in a premium township environment, created as a better
+            alternative to crowded high-rise living. Prime location, strong layout planning, everyday practicality,
+            store room utility, lift access and roof rights advantage make this a rare low-rise opportunity.
+          </p>
+
+          <div class="about-features mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2">
+            <article
+              class="about-feature grid grid-cols-[28px_1fr] gap-[14px] border-l border-[rgba(212,174,105,0.25)] pl-0.5 max-[639px]:border-[rgba(212,174,105,0.18)]">
+              <i class="fa-regular fa-building pl-2.5 text-xl text-[#d4ae69]" aria-hidden="true"></i>
+              <div>
+                <h3 class="text-sm font-bold text-[#f2eee7]">G+4 Low-Rise Architecture</h3>
+                <p class="mt-1 text-xs leading-5 text-[#8f8f8f]">Only 4 floors. No crowding.</p>
+              </div>
+            </article>
+            <article
+              class="about-feature grid grid-cols-[28px_1fr] gap-[14px] border-l border-[rgba(212,174,105,0.25)] pl-0.5 max-[639px]:border-[rgba(212,174,105,0.18)]">
+              <i class="fa-solid fa-spa pl-2.5 text-xl text-[#d4ae69]" aria-hidden="true"></i>
+              <div>
+                <h3 class="text-sm font-bold text-[#f2eee7]">70% Open Green Space</h3>
+                <p class="mt-1 text-xs leading-5 text-[#8f8f8f]">Larger central park, better light &amp; air.</p>
+              </div>
+            </article>
+            <article
+              class="about-feature grid grid-cols-[28px_1fr] gap-[14px] border-l border-[rgba(212,174,105,0.25)] pl-0.5 max-[639px]:border-[rgba(212,174,105,0.18)]">
+              <i class="fa-regular fa-circle-check pl-2.5 text-xl text-[#d4ae69]" aria-hidden="true"></i>
+              <div>
+                <h3 class="text-sm font-bold text-[#f2eee7]">RERA &amp; Bank Approved</h3>
+                <p class="mt-1 text-xs leading-5 text-[#8f8f8f]">Home loan ready. 100% legal clarity.</p>
+              </div>
+            </article>
+            <article
+              class="about-feature grid grid-cols-[28px_1fr] gap-[14px] border-l border-[rgba(212,174,105,0.25)] pl-0.5 max-[639px]:border-[rgba(212,174,105,0.18)]">
+              <i class="fa-solid fa-location-dot pl-2.5 text-xl text-[#d4ae69]" aria-hidden="true"></i>
+              <div>
+                <h3 class="text-sm font-bold text-[#f2eee7]">Sector 66 Prime Location</h3>
+                <p class="mt-1 text-xs leading-5 text-[#8f8f8f]">5 min to Airport Road.</p>
+              </div>
+            </article>
+          </div>
+
+          <a href="#contact"
+            class="about-cta mt-8 inline-flex min-h-12 items-center justify-center rounded-lg bg-[#d4ae69] px-8 text-xs font-bold text-[#151515] shadow-[0_16px_28px_rgba(212,174,105,0.18)] transition hover:-translate-y-0.5 hover:bg-[#e4c07e]">
+            Read More
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Low-rise opportunity section -->
+    <section class="opportunity-section relative min-h-[620px] scroll-mt-20 overflow-hidden bg-[#1c1c1c] text-white"
+      id="products">
+      <div class="opportunity-bg absolute inset-0 bg-cover bg-center scale-[1.01]" aria-hidden="true"></div>
+      <div class="opportunity-overlay absolute inset-0" aria-hidden="true"></div>
+
+      <div
+        class="relative z-10 mx-auto grid min-h-[620px] max-w-[1190px] items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_360px] lg:px-8">
+        <div class="opportunity-copy max-w-[430px] self-end pb-8 lg:self-center lg:pb-0">
+          <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-bold leading-[1.12] text-white">
+            A Rare Low-Rise Opportunity in a High-Rise Dominated Corridor
+          </h2>
+          <p class="mt-5 text-sm leading-6 text-white/85">
+            More privacy, more openness, and a more comfortable everyday living experience in a location where low-rise
+            supply is limited.
+          </p>
+          <a href="#about"
+            class="opportunity-scroll mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#d9b66d]">
+            Scroll
+            <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="opportunity-cards grid gap-4">
+          <article
+            class="opportunity-card grid min-h-[74px] grid-cols-[34px_1fr] items-center gap-4 rounded-lg border border-white/20 bg-[rgba(82,82,78,0.52)] px-[18px] py-4 shadow-[0_16px_38px_rgba(0,0,0,0.28)] backdrop-blur-xl max-[639px]:min-h-[68px] max-[639px]:px-[15px] max-[639px]:py-[14px]">
+            <i class="fa-solid fa-building-columns inline-flex h-[30px] w-[30px] items-center justify-center text-xl text-[#d9b66d]"
+              aria-hidden="true"></i>
+            <div>
+              <p class="mb-1 text-[10px] font-bold uppercase leading-[1.2] tracking-[0.11em] text-white/60">
+                Configuration</p>
+              <h3 class="text-[13px] font-bold leading-[1.35] text-white">3 BHK Built-Up Floors</h3>
+            </div>
+          </article>
+          <article
+            class="opportunity-card grid min-h-[74px] grid-cols-[34px_1fr] items-center gap-4 rounded-lg border border-white/20 bg-[rgba(82,82,78,0.52)] px-[18px] py-4 shadow-[0_16px_38px_rgba(0,0,0,0.28)] backdrop-blur-xl max-[639px]:min-h-[68px] max-[639px]:px-[15px] max-[639px]:py-[14px]">
+            <i class="fa-regular fa-gem inline-flex h-[30px] w-[30px] items-center justify-center text-xl text-[#d9b66d]"
+              aria-hidden="true"></i>
+            <div>
+              <p class="mb-1 text-[10px] font-bold uppercase leading-[1.2] tracking-[0.11em] text-white/60">Structure
+              </p>
+              <h3 class="text-[13px] font-bold leading-[1.35] text-white">Stilt + 4 with Lift</h3>
+            </div>
+          </article>
+          <article
+            class="opportunity-card grid min-h-[74px] grid-cols-[34px_1fr] items-center gap-4 rounded-lg border border-white/20 bg-[rgba(82,82,78,0.52)] px-[18px] py-4 shadow-[0_16px_38px_rgba(0,0,0,0.28)] backdrop-blur-xl max-[639px]:min-h-[68px] max-[639px]:px-[15px] max-[639px]:py-[14px]">
+            <i class="fa-solid fa-box-archive inline-flex h-[30px] w-[30px] items-center justify-center text-xl text-[#d9b66d]"
+              aria-hidden="true"></i>
+            <div>
+              <p class="mb-1 text-[10px] font-bold uppercase leading-[1.2] tracking-[0.11em] text-white/60">Store Room
+              </p>
+              <h3 class="text-[13px] font-bold leading-[1.35] text-white">Included in Every Unit</h3>
+            </div>
+          </article>
+          <article
+            class="opportunity-card grid min-h-[74px] grid-cols-[34px_1fr] items-center gap-4 rounded-lg border border-white/20 bg-[rgba(82,82,78,0.52)] px-[18px] py-4 shadow-[0_16px_38px_rgba(0,0,0,0.28)] backdrop-blur-xl max-[639px]:min-h-[68px] max-[639px]:px-[15px] max-[639px]:py-[14px]">
+            <i class="fa-regular fa-sun inline-flex h-[30px] w-[30px] items-center justify-center text-xl text-[#d9b66d]"
+              aria-hidden="true"></i>
+            <div>
+              <p class="mb-1 text-[10px] font-bold uppercase leading-[1.2] tracking-[0.11em] text-white/60">Special
+                Benefit</p>
+              <h3 class="text-[13px] font-bold leading-[1.35] text-white">Roof Rights on 4th Floor</h3>
+            </div>
+          </article>
+          <article
+            class="opportunity-card grid min-h-[74px] grid-cols-[34px_1fr] items-center gap-4 rounded-lg border border-white/20 bg-[rgba(82,82,78,0.52)] px-[18px] py-4 shadow-[0_16px_38px_rgba(0,0,0,0.28)] backdrop-blur-xl max-[639px]:min-h-[68px] max-[639px]:px-[15px] max-[639px]:py-[14px]">
+            <i class="fa-regular fa-calendar-check inline-flex h-[30px] w-[30px] items-center justify-center text-xl text-[#d9b66d]"
+              aria-hidden="true"></i>
+            <div>
+              <p class="mb-1 text-[10px] font-bold uppercase leading-[1.2] tracking-[0.11em] text-white/60">Possession
+              </p>
+              <h3 class="text-[13px] font-bold leading-[1.35] text-white">December 2026</h3>
+            </div>
+          </article>
+          <article
+            class="opportunity-card grid min-h-[74px] grid-cols-[34px_1fr] items-center gap-4 rounded-lg border border-white/20 bg-[rgba(82,82,78,0.52)] px-[18px] py-4 shadow-[0_16px_38px_rgba(0,0,0,0.28)] backdrop-blur-xl max-[639px]:min-h-[68px] max-[639px]:px-[15px] max-[639px]:py-[14px]">
+            <i class="fa-solid fa-certificate inline-flex h-[30px] w-[30px] items-center justify-center text-xl text-[#d9b66d]"
+              aria-hidden="true"></i>
+            <div>
+              <p class="mb-1 text-[10px] font-bold uppercase leading-[1.2] tracking-[0.11em] text-white/60">RERA</p>
+              <h3 class="text-[13px] font-bold leading-[1.35] text-white">PB-RERA-SAS81-PRO-941</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
