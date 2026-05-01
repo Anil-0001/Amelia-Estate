@@ -51,15 +51,15 @@ section[id] {
 }
 
 .hero-slide-1 {
-  background-image: url("../images/main.jpg");
+  background-image: url("/assets/images/main.jpg");
 }
 
 .hero-slide-2 {
-  background-image: url("../images/main2.jpg");
+  background-image: url("/assets/images/main2.jpg");
 }
 
 .hero-slide-3 {
-  background-image: url("../images/main3.png");
+  background-image: url("/assets/images/main2.jpg");
 }
 
 .hero-overlay {
@@ -332,7 +332,7 @@ section[id] {
 
 /* Low-rise opportunity section */
 .opportunity-bg {
-  background-image: url("../images/sunrise.jpg");
+  background-image: url("/assets/images/sunrise.jpg");
 }
 
 .opportunity-overlay {
