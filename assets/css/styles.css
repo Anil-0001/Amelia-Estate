@@ -374,10 +374,11 @@ section[id] {
 }
 
 .peace-section.is-visible .peace-overlay {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .peace-section.is-visible .peace-heading,
-.peace-section.is-visible .peace-text,.peace-section.is-visible .peace-scroll {
+.peace-section.is-visible .peace-text,
+.peace-section.is-visible .peace-scroll {
   animation: aboutSlideInLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
