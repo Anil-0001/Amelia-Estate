@@ -1,7 +1,7 @@
 
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector(".mobile-nav");
-const revealSections = document.querySelectorAll(".snapshot-section, .about-section, .opportunity-section");
+const revealSections = document.querySelectorAll(".snapshot-section, .about-section, .opportunity-section,.peace-section");
 const heroSlides = document.querySelectorAll(".hero-slide");
 const heroPanels = document.querySelectorAll(".hero-panel");
 

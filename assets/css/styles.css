@@ -1,9 +1,8 @@
-
 html {
   font-family: "Jost", Arial, sans-serif;
   scroll-behavior: smooth;
   scrollbar-color: #d4ae69 white;
-  scrollbar-width:auto;
+  scrollbar-width: auto;
 }
 
 body,
@@ -247,7 +246,7 @@ section[id] {
   gap: 16px;
 }
 
-.about-gallery > div {
+.about-gallery>div {
   display: grid;
   gap: 16px;
 }
@@ -354,4 +353,31 @@ section[id] {
 .opportunity-section.is-visible .opportunity-copy,
 .opportunity-section.is-visible .opportunity-cards {
   opacity: 1;
+}
+
+
+
+.peace-bg {
+  background-image: url("/assets/images/main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.peace-overlay {
+  opacity: 0;
+  background:
+    radial-gradient(circle at 56% 28%, rgba(214, 177, 111, 0.48), transparent 22%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.34) 48%, rgba(0, 0, 0, 0.66) 100%),
+    linear-gradient(180deg, rgba(16, 16, 16, 0.1), rgba(16, 16, 16, 0.72));
+  transition: opacity 850ms ease;
+}
+
+.peace-section.is-visible .peace-overlay {
+  opacity: 1;
+}
+
+.peace-section.is-visible .peace-heading,
+.peace-section.is-visible .peace-text,.peace-section.is-visible .peace-scroll {
+  animation: aboutSlideInLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }

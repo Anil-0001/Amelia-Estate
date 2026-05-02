@@ -16,7 +16,7 @@
 
 /* Desktop hero position */
 @media (min-width: 640px) {
- 
+
   .hero-bg {
     background-position: center;
   }
@@ -29,6 +29,7 @@
 }
 
 @media (min-width: 1024px) {
+
   .mobile-nav,
   .mobile-nav.is-open {
     display: none;
@@ -41,22 +42,24 @@
     padding-bottom: 48px !important;
   }
 
-  .opportunity-section > .relative {
+  .opportunity-section>.relative {
     padding-top: 56px !important;
     padding-bottom: 56px !important;
   }
 
-  .about-gallery {
-    grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.78fr);
-  }
 
-  .about-gallery > div {
-    grid-template-columns: 1fr;
-  }
+
+.about-gallery {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.78fr);
+}
+
+.about-gallery>div {
+  grid-template-columns: 1fr;
+}
 }
 
 @media (max-width: 639px) {
-  .hero-section > .relative {
+  .hero-section>.relative {
     padding-bottom: 10px;
   }
 
@@ -65,7 +68,7 @@
     padding-bottom: 36px !important;
   }
 
-  .opportunity-section > .relative {
+  .opportunity-section>.relative {
     padding-top: 42px !important;
     padding-bottom: 42px !important;
   }
