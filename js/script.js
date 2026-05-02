@@ -4,8 +4,18 @@ const mobileNav = document.querySelector(".mobile-nav");
 const revealSections = document.querySelectorAll(".snapshot-section, .about-section, .opportunity-section,.peace-section");
 const heroSlides = document.querySelectorAll(".hero-slide");
 const heroPanels = document.querySelectorAll(".hero-panel");
+const structSliderSection = document.querySelector(".struct-slider-section");
+const structSlides = structSliderSection?.querySelectorAll(".struct-slide") || [];
+const structCopies = structSliderSection?.querySelectorAll(".struct-copy") || [];
+const structIndexes = structSliderSection?.querySelectorAll(".struct-index") || [];
+const structDots = structSliderSection?.querySelectorAll(".struct-dot") || [];
 
 let activeHeroSlide = 0;
+let activeStructSlide = 0;
+let structTouchStartY = 0;
+let structVisible = false;
+let structReachedEnd = false;
+let structAnimating = false;
 
 if (heroSlides.length > 1) {
   setInterval(() => {
@@ -15,6 +25,142 @@ if (heroSlides.length > 1) {
     heroSlides[activeHeroSlide].classList.add("is-active");
     heroPanels[activeHeroSlide]?.classList.add("is-active");
   }, 8000);
+}
+
+const updateStructSlide = (nextIndex) => {
+  if (!structSlides.length || structAnimating || nextIndex === activeStructSlide) {
+    return;
+  }
+
+  structAnimating = true;
+  structSlides[activeStructSlide]?.classList.remove("is-active");
+  structCopies[activeStructSlide]?.classList.remove("is-active");
+  structIndexes[activeStructSlide]?.classList.remove("is-active");
+  structDots[activeStructSlide]?.classList.remove("is-active");
+
+  activeStructSlide = nextIndex;
+  structSlides[activeStructSlide]?.classList.add("is-active");
+  structCopies[activeStructSlide]?.classList.add("is-active");
+  structIndexes[activeStructSlide]?.classList.add("is-active");
+  structDots[activeStructSlide]?.classList.add("is-active");
+
+  if (activeStructSlide === structSlides.length - 1) {
+    structReachedEnd = true;
+    structSliderSection?.classList.add("is-complete");
+  }
+
+  window.setTimeout(() => {
+    structAnimating = false;
+  }, 700);
+};
+
+if (structSliderSection && structSlides.length > 1) {
+  const getShouldLock = () => {
+    if (!structVisible) {
+      return false;
+    }
+    if (!structReachedEnd) {
+      return true;
+    }
+    return activeStructSlide < structSlides.length - 1;
+  };
+
+  const syncStructLockState = () => {
+    if (getShouldLock()) {
+      document.body.classList.add("struct-slider-locked");
+    } else {
+      document.body.classList.remove("struct-slider-locked");
+    }
+  };
+
+  const structObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        structVisible = entry.isIntersecting;
+        syncStructLockState();
+      });
+    },
+    { threshold: 0.72 }
+  );
+
+  structObserver.observe(structSliderSection);
+
+  const handleStructWheel = (event) => {
+    if (!structVisible) {
+      return;
+    }
+
+    if (event.deltaY > 12 && activeStructSlide < structSlides.length - 1) {
+      event.preventDefault();
+      updateStructSlide(activeStructSlide + 1);
+      syncStructLockState();
+    } else if (event.deltaY < -12 && activeStructSlide > 0) {
+      event.preventDefault();
+      updateStructSlide(activeStructSlide - 1);
+      syncStructLockState();
+    } else if (event.deltaY < -12 && activeStructSlide === 0) {
+      document.body.classList.remove("struct-slider-locked");
+    } else if (getShouldLock()) {
+      event.preventDefault();
+    }
+  };
+
+  const handleStructTouchStart = (event) => {
+    structTouchStartY = event.touches[0]?.clientY || 0;
+  };
+
+  const handleStructTouchMove = (event) => {
+    if (!structVisible) {
+      return;
+    }
+
+    const currentY = event.touches[0]?.clientY || 0;
+    const deltaY = structTouchStartY - currentY;
+    if (deltaY > 16 && activeStructSlide < structSlides.length - 1) {
+      event.preventDefault();
+      updateStructSlide(activeStructSlide + 1);
+      syncStructLockState();
+      structTouchStartY = currentY;
+    } else if (deltaY < -16 && activeStructSlide > 0) {
+      event.preventDefault();
+      updateStructSlide(activeStructSlide - 1);
+      syncStructLockState();
+      structTouchStartY = currentY;
+    } else if (deltaY < -16 && activeStructSlide === 0) {
+      document.body.classList.remove("struct-slider-locked");
+    } else if (getShouldLock()) {
+      event.preventDefault();
+    }
+  };
+
+  const handleStructKeydown = (event) => {
+    if (!structVisible) {
+      return;
+    }
+
+    if (["ArrowDown", "PageDown", "Space"].includes(event.code)) {
+      if (activeStructSlide < structSlides.length - 1) {
+        event.preventDefault();
+        updateStructSlide(activeStructSlide + 1);
+        syncStructLockState();
+      } else if (getShouldLock()) {
+        event.preventDefault();
+      }
+    } else if (["ArrowUp", "PageUp"].includes(event.code)) {
+      if (activeStructSlide > 0) {
+        event.preventDefault();
+        updateStructSlide(activeStructSlide - 1);
+        syncStructLockState();
+      } else if (getShouldLock()) {
+        document.body.classList.remove("struct-slider-locked");
+      }
+    }
+  };
+
+  window.addEventListener("wheel", handleStructWheel, { passive: false });
+  window.addEventListener("touchstart", handleStructTouchStart, { passive: true });
+  window.addEventListener("touchmove", handleStructTouchMove, { passive: false });
+  window.addEventListener("keydown", handleStructKeydown);
 }
 
 if (menuToggle && mobileNav) {
