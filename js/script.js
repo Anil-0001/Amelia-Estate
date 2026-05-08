@@ -1,7 +1,7 @@
 
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector(".mobile-nav");
-const revealSections = document.querySelectorAll(".snapshot-section, .about-section, .opportunity-section,.peace-section");
+const revealSections = document.querySelectorAll(".snapshot-section, .about-section, .opportunity-section,.peace-section, .lead-form-section");
 const heroSlides = document.querySelectorAll(".hero-slide");
 const heroPanels = document.querySelectorAll(".hero-panel");
 const structSliderSection = document.querySelector(".struct-slider-section");
@@ -9,6 +9,7 @@ const structSlides = structSliderSection?.querySelectorAll(".struct-slide") || [
 const structCopies = structSliderSection?.querySelectorAll(".struct-copy") || [];
 const structIndexes = structSliderSection?.querySelectorAll(".struct-index") || [];
 const structDots = structSliderSection?.querySelectorAll(".struct-dot") || [];
+const leadForm = document.querySelector(".lead-form");
 
 let activeHeroSlide = 0;
 let activeStructSlide = 0;
@@ -174,6 +175,24 @@ if (menuToggle && mobileNav) {
       menuToggle.setAttribute("aria-label", "Open menu");
       menuToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
     });
+  });
+}
+
+if (leadForm) {
+  leadForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!leadForm.checkValidity()) {
+      leadForm.reportValidity();
+      return;
+    }
+
+    const status = leadForm.querySelector(".lead-form-status");
+    if (status) {
+      status.textContent = "Thank you. Our team will contact you shortly.";
+    }
+
+    leadForm.reset();
   });
 }
 
