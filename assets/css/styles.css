@@ -415,7 +415,7 @@ body.struct-slider-locked {
 }
 
 .struct-slide-4 {
-  background-image: url("/assets/images/structslider4.jpg");
+  background-image: url("/assets/images/stuctslider4.jpg");
 }
 
 .struct-slide-5 {
@@ -434,12 +434,23 @@ body.struct-slider-locked {
   animation: structOverlayReveal 920ms ease-out 180ms forwards;
 }
 
+.struct-slider-inner {
+  gap: clamp(28px, 6vw, 96px);
+}
+
 .struct-slider-rail {
+  display: flex;
+  flex: 0 0 84px;
   width: 84px;
   min-height: 260px;
   align-items: flex-start;
   padding-top: 0;
   transform: translateY(-94px);
+}
+
+.struct-slider-content {
+  position: relative;
+  min-height: 245px;
 }
 
 .struct-slider-rail-items {
@@ -476,7 +487,7 @@ body.struct-slider-locked {
   width: 30px;
   background: #d5ae66;
 }
-
+/* 
 .struct-mobile-dots {
   min-height: 14px;
   width: auto;
@@ -497,7 +508,7 @@ body.struct-slider-locked {
   background: #d5ae66;
   box-shadow: 0 0 0 1px rgba(213, 174, 102, 0.8);
   transform: translateY(1px);
-}
+} */
 
 .struct-copy {
   display: none;
@@ -520,7 +531,7 @@ body.struct-slider-locked {
   max-width: 620px;
   font-size: clamp(2rem, 4.2vw, 3.3rem);
   line-height: 1.12;
-  font-weight: 700;
+  font-weight: 500;
   color: #ffffff;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.44);
 }
@@ -531,7 +542,7 @@ body.struct-slider-locked {
 
 .struct-description {
   margin-top: 12px;
-  max-width: 550px;
+  max-width: 400px;
   font-size: 16px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.9);
@@ -539,7 +550,7 @@ body.struct-slider-locked {
 
 @keyframes structOverlayReveal {
   to {
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 

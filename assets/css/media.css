@@ -63,11 +63,70 @@
     padding-bottom: 10px;
   }
 
+  .struct-slider-inner {
+    justify-content: center;
+    padding-top: 76px !important;
+    padding-bottom: 76px !important;
+  }
+
+  .struct-slider-rail {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: auto;
+    min-height: auto;
+    padding-top: 0;
+  }
+
+  .struct-slider-rail-items {
+    gap: 12px;
+  }
+
+  .struct-index {
+    font-size: 11px;
+    padding-left: 28px;
+  }
+
+  .struct-index::before {
+    width: 18px;
+  }
+
+  .struct-index.is-active::before {
+    width: 24px;
+  }
   .struct-slider-content {
+    width: 100%;
+    max-width: 100%;
+    min-height: 315px;
+    padding: 0 18px 0 58px;
+    margin: auto;
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .struct-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .struct-title {
+    max-width: 100%;
+    font-size: clamp(1.75rem, 9vw, 2.45rem);
+    line-height: 1.12;
+  }
+   .struct-description {
+    max-width: 100%;
+  }
+
+  /* .struct-slider-content {
     max-width: 100%;
     position: relative;
     padding-right: 30px;
-  }
+  } */
 
   .struct-mobile-dots {
     position: absolute;
